@@ -1,0 +1,41 @@
+{
+  "name": "image-uploader-s3",
+  "version": "1.0.0",
+  "description": "Upload images to amazon s3",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boole-io/image-uploader-s3.git"
+  },
+  "keywords": [
+    "upload",
+    "uploader",
+    "node",
+    "express-upload",
+    "express-uploader",
+    "express-fileuploader",
+    "s3"
+  ],
+  "author": "Armando Mendivil <armandomendivil.m@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boole-io/image-uploader-s3/issues"
+  },
+  "homepage": "https://github.com/boole-io/image-uploader-s3#readme",
+  "dependencies": {
+    "aws-sdk": "2.7.0",
+    "file-extension": "3.1.0",
+    "multer": "1.2.0",
+    "multer-s3": "2.4.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "connect-multiparty": "2.0.0",
+    "express": "4.14.0",
+    "should": "11.1.1",
+    "supertest": "2.0.1"
+  }
+}
