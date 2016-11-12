@@ -11,14 +11,16 @@ var expect = require('chai').expect;
 var server = require('express')();
 var mutilpart = require('connect-multiparty');
 var request = require('supertest');
-var upload = require('../index');
+var Image = require('../index');
+
+var image = new Image();
 
 describe('Upload Image', function () {
   it('It should upload image to s3', function (done) {
     server.use('/upload/image', mutilpart());
 
     server.post('/upload/image', function(req, res) {
-      upload(req, res, function (error) {
+      image.uploader(req, res, function (error) {
         if (error) {
           return res.status(500).send({ message: `Error uploading file: ${error.message}` });
         }
@@ -32,6 +34,7 @@ describe('Upload Image', function () {
      .expect(200)
      .end(function(err, res) {
        if (err) {
+         console.log('ERROR', err);
          return done(err);
        }
        console.log('RESPONSE', res.body);

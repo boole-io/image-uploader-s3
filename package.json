@@ -34,6 +34,7 @@
   "devDependencies": {
     "chai": "3.5.0",
     "connect-multiparty": "2.0.0",
+    "eslint-config-airbnb-es5": "1.1.0",
     "express": "4.14.0",
     "should": "11.1.1",
     "supertest": "2.0.1"
